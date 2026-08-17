@@ -1,0 +1,13 @@
+:root{--ember:#b88a4f;--wine:#4d2943;--cream:#f7f5f1;--ink:#20242a;--muted:#687078;--line:#deded9;--card:#fbfaf7}
+.app-header{background:#19232b;border-bottom:1px solid #ffffff14}
+.app-brand b{color:#d9ad70}
+.avatar-mini,.chat-avatar{background:linear-gradient(145deg,#c99c63,#4d2943)}
+.panel{border-radius:14px;box-shadow:0 14px 40px #24313a0d}
+.primary{background:linear-gradient(120deg,#4d2943,#6d3c5e)}
+.secondary{background:#ece9e5}
+.demo-note{background:#eeeae2;color:#5f594f}
+.conversation.active{background:#efebe7}
+.messages{background:#f8f7f4}
+.bubble.them{background:#e9e6e2}
+.tag{background:#ece9e5;color:#5d5157}
+.fact{background:#efebe7}

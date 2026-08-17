@@ -17,3 +17,18 @@ h1,h2,h3 { margin-top:0; }.hero h1 { margin-bottom:22px; font:700 clamp(45px,6vw
 footer { display:flex; justify-content:space-between; gap:20px; padding:28px clamp(24px,7vw,110px); background:#191516; color:#a99fa1; font-size:12px; }footer div { display:flex; gap:22px; }
 @media(max-width:800px){.site-header{height:68px}.site-header nav a:not(.login-link){display:none}.hero{min-height:auto;grid-template-columns:1fr;padding-top:120px;gap:35px}.hero-photo{background-position:32% center}.hero-shade{background:linear-gradient(180deg,#160d0f44,#160d0fcc 55%,#160d0ff5)}.hero-content{padding-top:140px}.signup-card{max-width:500px}.step-grid,.safety{grid-template-columns:1fr}.safety{padding:35px;gap:10px}.trust-row{flex-direction:column;gap:8px}footer{flex-direction:column}.brand{font-size:19px}}
 @media(max-width:460px){.hero{padding-inline:18px}.signup-card{padding:24px}.hero h1{font-size:43px}.steps{padding-inline:18px}.safety{margin-inline:18px}.site-header{padding-inline:18px}}
+
+/* Ruhige, seriöse Designlinie */
+:root{--ember:#b88a4f;--wine:#4d2943;--cream:#f7f5f1;--ink:#20242a;--muted:#687078}
+.site-header{background:#19232b;border-bottom:1px solid #ffffff17}
+.brand strong{color:#d9ad70}.brand-flame{border-radius:50%;background:linear-gradient(145deg,#d9ad70,#886348);transform:none}
+nav a:hover{color:#e4c38f}
+.hero-shade{background:linear-gradient(90deg,rgba(17,28,35,.18),rgba(17,28,35,.36) 40%,rgba(17,28,35,.93))}
+.eyebrow,.section-kicker,.card-kicker{color:#d9ad70}
+.hero h1 em{color:#e0b576}.intro{color:#f2f2ef}.trust-row{color:#e5e7e5}
+.signup-card{background:rgba(250,249,246,.98);border-radius:14px;border:1px solid #ffffff55;box-shadow:0 24px 70px #0007}
+.primary{border-radius:8px;background:linear-gradient(120deg,#4d2943,#6d3c5e);box-shadow:0 10px 24px #4d294333}
+.step-grid article{border-color:#deded9;border-radius:12px;background:#fbfaf7}
+.safety{border-radius:16px;background:#1d2a32}
+footer{background:#172129;color:#adb5ba}
+@media(max-width:800px){.hero-shade{background:linear-gradient(180deg,#13212a55,#13212acc 55%,#13212af5)}}
