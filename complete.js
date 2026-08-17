@@ -1,0 +1,2 @@
+document.querySelectorAll('[data-save]').forEach((button)=>button.addEventListener('click',(event)=>{event.preventDefault();const toast=document.createElement('div');toast.className='toast';toast.textContent='Demo: Änderungen wurden nur als Vorschau übernommen.';document.body.appendChild(toast);setTimeout(()=>toast.remove(),2800)}));
+document.querySelectorAll('[data-confirm]').forEach((button)=>button.addEventListener('click',()=>alert('Demo: Diese Aktion würde im echten System noch einmal bestätigt.')));
