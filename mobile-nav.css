@@ -1,0 +1,22 @@
+.mobile-member-nav,.mobile-more-sheet,.mobile-sheet-backdrop{display:none}
+@media(max-width:800px){
+  body.has-mobile-member-nav{padding-bottom:66px}
+  .mobile-member-nav{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:repeat(4,1fr);height:66px;padding:5px 8px max(5px,env(safe-area-inset-bottom));border-top:1px solid #d9ddde;background:#fff;box-shadow:0 -7px 24px #19232b12}
+  .mobile-member-nav a,.mobile-member-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;background:transparent;color:#6c7479;font:600 10px "DM Sans",sans-serif;cursor:pointer}
+  .mobile-member-nav .mobile-nav-icon{font-size:21px;line-height:1}
+  .mobile-member-nav .active{color:#5b304f}
+  .mobile-sheet-backdrop{position:fixed;inset:0;z-index:58;background:#12191d80}
+  .mobile-sheet-backdrop.open{display:block}
+  .mobile-more-sheet{position:fixed;left:10px;right:10px;bottom:76px;z-index:60;display:block;padding:10px;border:1px solid #d8dcdd;border-radius:18px;background:#fff;box-shadow:0 18px 55px #0004;transform:translateY(calc(100% + 110px));transition:transform .22s ease}
+  .mobile-more-sheet.open{transform:translateY(0)}
+  .mobile-more-sheet header{display:flex;align-items:center;justify-content:space-between;padding:9px 10px 12px}
+  .mobile-more-sheet header strong{font:700 20px "Playfair Display",serif}
+  .mobile-more-sheet header button{width:34px;height:34px;border:0;border-radius:50%;background:#eef0f0;font-size:18px}
+  .mobile-more-sheet a{display:flex;align-items:center;justify-content:space-between;padding:14px 12px;border-top:1px solid #eceeed;font-size:14px;font-weight:600}
+  .mobile-more-sheet a small{color:#858d91;font-weight:400}
+  .mobile-more-sheet .logout-link{color:#a23f48}
+  .has-mobile-member-nav .messenger-shell{height:calc(100vh - 72px - 66px)}
+  .has-mobile-member-nav .messenger-shell.chat-open .active-chat{height:calc(100vh - 72px - 66px)}
+  .has-mobile-member-nav .page{margin-bottom:30px}
+  .has-mobile-member-nav .side-menu{display:none}
+}
