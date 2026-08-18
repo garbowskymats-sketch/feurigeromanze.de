@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
   <header class="site-header">
@@ -36,19 +37,15 @@
         </div>
       </div>
 
-      <form class="signup-card" action="register.html" method="get">
-        <p class="card-kicker">UNVERBINDLICH KENNENLERNEN</p>
-        <h2>Wen möchtest du kennenlernen?</h2>
-        <div class="choice-row" role="group" aria-label="Auswahl">
-          <button type="button" class="choice active">Frauen</button>
-          <button type="button" class="choice">Männer</button>
-        </div>
-        <label for="email">E-Mail-Adresse</label>
-        <input id="email" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required>
-        <button class="primary" type="submit">Mit der Suche beginnen <span>→</span></button>
-        <p class="legal">Mit der Registrierung bestätigst du, dass du mindestens 18 Jahre alt bist und akzeptierst unsere Bedingungen.</p>
+      <section class="signup-card entry-card" aria-labelledby="entry-title">
+        <p class="card-kicker">WILLKOMMEN BEI FEURIGE ROMANZE</p>
+        <h2 id="entry-title">Wie möchtest du starten?</h2>
+        <p class="entry-intro">Wähle aus, ob du bereits Mitglied bist oder ein neues Profil erstellen möchtest.</p>
+        <a class="entry-action entry-login" href="login.html"><span><strong>Anmelden</strong><small>Ich habe bereits ein Konto</small></span><b>→</b></a>
+        <a class="entry-action entry-register" href="register.html"><span><strong>Registrieren</strong><small>Neues Profil kostenlos erstellen</small></span><b>→</b></a>
+        <p class="legal">Die Plattform ist ausschließlich für Personen ab 18 Jahren.</p>
         <p class="member-note"><span class="pulse"></span> Deine Angaben werden vertraulich behandelt</p>
-      </form>
+      </section>
     </section>
 
     <section class="steps" id="so-gehts">

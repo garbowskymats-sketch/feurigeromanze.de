@@ -1,0 +1,10 @@
+.entry-intro{margin:-4px 0 22px;color:#687078;font-size:14px;line-height:1.55}
+.entry-action{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:11px;padding:16px 17px;border-radius:10px;transition:transform .18s ease,box-shadow .18s ease}
+.entry-action:hover{transform:translateY(-2px)}
+.entry-action span,.entry-action strong,.entry-action small{display:block}
+.entry-action strong{font-size:16px}
+.entry-action small{margin-top:3px;font-size:11px;font-weight:400}
+.entry-action b{font-size:20px}
+.entry-login{border:1px solid #d4cdca;background:#fff;color:#3e3337}
+.entry-login:hover{box-shadow:0 9px 24px #19232b14}
+.entry-register{background:linear-gradient(120deg,#4d2943,#6d3c5e);color:#fff;box-shadow:0 10px 24px #4d294326}
