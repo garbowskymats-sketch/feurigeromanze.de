@@ -1,1 +1,39 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nachrichten – Feurige Romanze</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="app-serious.css"></head><body><header class="app-header"><a class="app-brand" href="index.html">Feurige <b>Romanze</b></a><nav class="app-nav"><a href="members.html">Entdecken</a><a class="active" href="chat.html">Nachrichten</a><a href="edit-profile.html">Mein Bereich</a><span class="avatar-mini">M</span></nav></header><main class="page"><div class="page-head"><div><p class="eyebrow">DEMO-BEREICH</p><h1>Nachrichten</h1></div></div><section class="panel chat-layout"><aside class="conversations"><div class="conversation active"><span class="chat-avatar">L</span><div><strong>Lena</strong><small>Das klingt schön 😊</small></div></div><div class="conversation"><span class="chat-avatar">S</span><div><strong>Sophie</strong><small>Bis bald!</small></div></div></aside><div class="chat-main"><div class="chat-title"><strong><span class="online"></span>Lena</strong> <small>· erfundenes Demo-Profil</small></div><div class="messages"><div class="bubble them">Hallo! Dein Profil klingt sympathisch. Spielst du auch ein Instrument?</div><div class="bubble me">Ja, ein bisschen Gitarre. Am liebsten draußen im Sommer.</div><div class="bubble them">Das klingt schön 😊</div></div><form class="composer"><input aria-label="Nachricht" placeholder="Schreibe eine Demo-Nachricht …"><button class="primary">Senden</button></form></div></section></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nachrichten – Feurige Romanze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css"><link rel="stylesheet" href="app-serious.css"><link rel="stylesheet" href="complete.css"><link rel="stylesheet" href="modern-chat.css">
+</head>
+<body class="messenger-body">
+  <header class="app-header"><a class="app-brand" href="index.html">Feurige <b>Romanze</b></a><nav class="app-nav"><a href="members.html">Entdecken</a><a class="active" href="chat.html">Nachrichten <span class="nav-badge">2</span></a><a href="edit-profile.html">Mein Bereich</a><span class="avatar-mini">M</span></nav></header>
+  <main class="messenger-shell">
+    <aside class="chat-sidebar" id="chatSidebar">
+      <div class="sidebar-head"><div><p class="eyebrow">NACHRICHTEN</p><h1>Chats</h1></div><button class="icon-button" title="Neue Nachricht">＋</button></div>
+      <label class="chat-search"><span>⌕</span><input type="search" placeholder="Gespräche durchsuchen"></label>
+      <div class="conversation-tabs"><button class="active">Alle</button><button>Ungelesen <span>2</span></button><button>Matches</button></div>
+      <div class="conversation-list">
+        <button class="conversation-row active" data-conversation="Lena"><span class="photo-avatar lena"><i></i></span><span class="conversation-copy"><strong>Lena <small>18:42</small></strong><span><b>Du:</b> Klingt gut, bis später!</span></span><span class="read-mark">✓✓</span></button>
+        <button class="conversation-row" data-conversation="Sophie"><span class="photo-avatar sophie"><i></i></span><span class="conversation-copy"><strong>Sophie <small>18:31</small></strong><span>Hast du am Wochenende Zeit?</span></span><span class="unread-count">2</span></button>
+        <button class="conversation-row" data-conversation="Daniel"><span class="photo-avatar daniel"></span><span class="conversation-copy"><strong>Daniel <small>Gestern</small></strong><span>Das Foto ist wirklich schön.</span></span></button>
+      </div>
+    </aside>
+    <section class="active-chat">
+      <header class="active-chat-head"><button class="mobile-back" id="mobileBack">←</button><a href="profile.html" class="chat-person"><span class="photo-avatar lena"><i></i></span><span><strong>Lena, 32</strong><small><i class="online-dot"></i> Online</small></span></a><div class="chat-tools"><button class="icon-button" title="Profil">ⓘ</button><a class="icon-button" href="report.html" title="Melden oder blockieren">⋯</a></div></header>
+      <div class="safety-strip">Teile keine sensiblen Daten. <a href="help.html">Sicherheitstipps</a></div>
+      <div class="message-area" id="messageArea">
+        <div class="day-divider"><span>Heute</span></div>
+        <div class="bubble them">Hallo! Dein Profil klingt sympathisch. Spielst du auch ein Instrument?<small>18:34</small></div>
+        <div class="bubble me">Ja, ein bisschen Gitarre. Am liebsten draußen im Sommer.<small>18:36 ✓✓</small></div>
+        <div class="bubble them">Das klingt schön 😊<small>18:39</small></div>
+        <div class="typing-bubble hidden" id="typingBubble"><span></span><span></span><span></span></div>
+      </div>
+      <div class="typing-label" id="typingLabel">Lena schreibt gerade …</div>
+      <form class="modern-composer" id="modernComposer"><button type="button" class="icon-button" title="Bild anhängen">＋</button><button type="button" class="icon-button emoji-toggle" title="Emoji">☺</button><input id="messageInput" autocomplete="off" placeholder="Nachricht schreiben …"><button type="button" class="icon-button" title="Sprachnachricht">🎙</button><button class="send-button" title="Senden">➤</button></form>
+    </section>
+  </main>
+  <script src="modern-chat.js"></script>
+</body>
+</html>
