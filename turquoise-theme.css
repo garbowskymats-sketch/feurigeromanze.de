@@ -1,0 +1,83 @@
+:root{
+  --ember:#21d4c3;
+  --wine:#087f79;
+  --cream:#071012;
+  --ink:#efffff;
+  --muted:#9bb6b5;
+  --line:#1b3d3d;
+  --card:#0d191b;
+  --turquoise:#20d6c5;
+  --turquoise-dark:#087f79;
+  --black:#05090a;
+  --surface:#0d191b;
+  --surface-soft:#132326;
+}
+
+body{background:var(--cream);color:var(--ink)}
+.app-header{background:#05090af2;border-bottom:1px solid #163638;color:#efffff}
+.app-brand b,.eyebrow{color:var(--turquoise)}
+.app-nav a:hover,.app-nav .active{background:#20d6c51c;color:#7ff7ed}
+.avatar-mini{background:linear-gradient(145deg,#23dfce,#075f5c);color:#031010}
+.panel{background:var(--surface);border-color:var(--line);box-shadow:0 16px 45px #0005}
+.lead,.auth-foot,.stat small,.faq p,.legal-page p,.legal-page li{color:var(--muted)}
+.primary{background:linear-gradient(120deg,#20d6c5,#07867f);color:#031112;box-shadow:0 8px 24px #12b8aa2b}
+.primary:hover{filter:brightness(1.08)}
+.secondary{background:#173033;color:#8ef9ef;border:1px solid #275457}
+.field input,.field textarea,.field select,.filters select,.search,.filter-field select,.filter-field input{border-color:#285052;background:#091416;color:#efffff}
+.field input:focus,.field textarea:focus{border-color:var(--turquoise);box-shadow:0 0 0 3px #20d6c524}
+input::placeholder,textarea::placeholder{color:#789493}
+.demo-note,.placeholder{background:#102a2b;border-color:#275456;color:#b7e7e3}
+.auth-photo{background:linear-gradient(#0207074d,#020707b8),url("assets/hero-romance.png") 32% center/cover}
+.tag{background:#143234;color:#8cebe4}
+.fact,.photo-upload{background:#102426;border-color:#285052;color:#dff7f5}
+.online,.online-dot{background:#20d6c5;box-shadow:0 0 0 3px #20d6c520}
+.side-menu a:hover,.side-menu a.active{background:#153033;color:#7ff7ed}
+.switch{background:#16b9ac}
+.toggle-row,.admin-table th,.admin-table td,.faq details{border-color:#1c3c3e}
+.alert{background:#132628;color:#b7cecc;border-color:#24b8ad}
+.danger{background:#2b171a;border-color:#d86470;color:#f2c9cd}
+.status{background:#123a35;color:#80ebd8}.status.warn{background:#352d17;color:#f1d281}
+.toast{background:#102426;color:#efffff;border:1px solid #266063}
+
+/* Startseite */
+.site-header,.home-header,.hero-panel,.hero-card,.login-card,.entry-card,.signup-card,.feature-card,.home-card,footer{border-color:#1b3d3d!important}
+.site-header,.home-header{background:#05090af0!important;color:#efffff!important}
+.home-page,.landing-page{background:#071012!important;color:#efffff!important}
+.hero-copy,.hero-content{color:#efffff}
+.hero-copy p,.hero-content p{color:#a8c0bf}
+.entry-register,.cta-primary{background:linear-gradient(120deg,#20d6c5,#087f79)!important;color:#031112!important}
+.entry-login,.cta-secondary{background:#0d191b!important;border-color:#285052!important;color:#dffffc!important}
+.signup-card{background:#0d191bf2!important;color:#efffff!important;box-shadow:0 22px 65px #0008!important}
+.signup-card h2{color:#efffff!important}.signup-card .entry-intro,.signup-card .legal,.signup-card .member-note{color:#9bb6b5!important}
+.card-kicker,.section-kicker{color:#20d6c5!important}
+.steps,.safety,footer{background:#091416!important;color:#efffff!important}
+.step-grid article{background:#0d191b!important;border-color:#1b3d3d!important}.step-grid article p,.safety>p{color:#9bb6b5!important}
+
+/* Mitglieder und Profile */
+.member-info{background:#0d191b}.profile-status{background:#061011e8;color:#dffffc}
+.interest-button{background:#0d191b;border-color:#20b9ae;color:#7ff7ed}
+.interest-button.selected,.interest-button.matched{background:#0d8b83;color:#fff;border-color:#26dacb}
+
+/* Messenger */
+.messenger-shell{background:#071012}
+.chat-sidebar{background:#091416;border-color:#1c3b3d}
+.chat-search{background:#0e1d1f;border-color:#285052}.chat-search input{color:#efffff}
+.conversation-tabs button{background:#142527;color:#a9c2c1}.conversation-tabs button.active{background:#13a99f;color:#041112}
+.conversation-row{border-color:#173335;color:#eafffd}.conversation-row:hover,.conversation-row.active{background:#10292b}
+.conversation-copy strong small,.conversation-copy>span{color:#8da8a7}.unread-count{background:#20d6c5;color:#031112}.read-mark{color:#39dacc}
+.active-chat{background:#091416}.active-chat-head,.modern-composer{background:#0b1719;border-color:#1e4143}
+.chat-person small{color:#9cb5b4}.icon-button{background:#153033;color:#83eee6}
+.safety-strip{background:#102b2c;color:#a9d8d4}
+.message-area{background-color:#071214;background-image:radial-gradient(#1b4444 .7px,transparent .7px)}
+.day-divider span{background:#102426;color:#9cb7b5;box-shadow:0 2px 8px #0004}
+.message-area .bubble.them{background:#16282a;color:#efffff}
+.message-area .bubble.me{background:linear-gradient(135deg,#0e9f96,#08756f);color:#fff}
+.modern-composer input{background:#071214;border-color:#285052;color:#efffff}.send-button{background:#20d6c5;color:#031112}
+
+/* Mobile Navigation */
+@media(max-width:800px){
+  .mobile-member-nav{background:#071012;border-color:#1b3d3d;box-shadow:0 -7px 24px #0007}
+  .mobile-member-nav a,.mobile-member-nav button{color:#819c9b}.mobile-member-nav .active{color:#27dfce}
+  .mobile-more-sheet{background:#0d191b;border-color:#285052;color:#efffff}.mobile-more-sheet header button{background:#183033;color:#8ff8ef}
+  .mobile-more-sheet a{border-color:#1d3b3d}.mobile-more-sheet a small{color:#7ca09e}
+}
