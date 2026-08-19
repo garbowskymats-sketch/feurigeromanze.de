@@ -26,6 +26,8 @@ body{background:var(--cream);color:var(--ink)}
 .field input,.field textarea,.field select,.filters select,.search,.filter-field select,.filter-field input{border-color:#285052;background:#091416;color:#efffff}
 .field input:focus,.field textarea:focus{border-color:var(--turquoise);box-shadow:0 0 0 3px #20d6c524}
 input::placeholder,textarea::placeholder{color:#789493}
+.age-message{margin:7px 2px 0;color:#9bb6b5;font-size:12px;line-height:1.4}.age-message.invalid{color:#ff8993}.age-message.valid{color:#5ee5c6}
+.age-confirmation{display:flex;gap:9px;align-items:start;margin:16px 0;font-size:12px;line-height:1.5}.age-confirmation input{width:auto;margin-top:3px}.age-confirmation input:disabled{cursor:not-allowed;opacity:.45}
 .demo-note,.placeholder{background:#102a2b;border-color:#275456;color:#b7e7e3}
 .auth-photo{background:linear-gradient(#0207074d,#020707b8),url("assets/hero-romance.png") 32% center/cover}
 .tag{background:#143234;color:#8cebe4}
