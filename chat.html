@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css"><link rel="stylesheet" href="app-serious.css"><link rel="stylesheet" href="complete.css"><link rel="stylesheet" href="modern-chat.css">
-<link rel="stylesheet" href="mobile-nav.css"><link rel="stylesheet" href="turquoise-theme.css"></head>
+<link rel="stylesheet" href="mobile-nav.css"><link rel="stylesheet" href="turquoise-theme.css"><link rel="stylesheet" href="chat-extras.css"></head>
 <body class="messenger-body">
   <header class="app-header"><a class="app-brand" href="index.html">Feurige <b>Romanze</b></a><nav class="app-nav"><a href="members.html">Entdecken</a><a class="active" href="chat.html">Nachrichten <span class="nav-badge">2</span></a><a href="edit-profile.html">Mein Bereich</a><span class="avatar-mini">M</span></nav></header>
   <main class="messenger-shell">
@@ -29,7 +29,18 @@
         <div class="bubble me">Ja, ein bisschen Gitarre. Am liebsten draußen im Sommer.<small>18:36 ✓✓</small></div>
         <div class="bubble them">Das klingt schön 😊<small>18:39</small></div>
       </div>
-      <form class="modern-composer" id="modernComposer"><button type="button" class="icon-button" title="Bild anhängen">＋</button><button type="button" class="icon-button emoji-toggle" title="Emoji">☺</button><input id="messageInput" autocomplete="off" placeholder="Nachricht schreiben …"><button type="button" class="icon-button" title="Sprachnachricht">🎙</button><button class="send-button" title="Senden">➤</button></form>
+      <div class="emoji-picker" id="emojiPicker" aria-label="Emojis auswählen" hidden>
+        <div class="emoji-picker-head"><strong>Emojis</strong><button type="button" id="closeEmojiPicker" aria-label="Emoji-Auswahl schließen">×</button></div>
+        <div class="emoji-grid">
+          <button type="button">😀</button><button type="button">😊</button><button type="button">😂</button><button type="button">😍</button><button type="button">🥰</button><button type="button">😘</button>
+          <button type="button">😉</button><button type="button">😇</button><button type="button">🙂</button><button type="button">🤗</button><button type="button">🤔</button><button type="button">😅</button>
+          <button type="button">😢</button><button type="button">😭</button><button type="button">😴</button><button type="button">😎</button><button type="button">🥳</button><button type="button">🙈</button>
+          <button type="button">❤️</button><button type="button">💕</button><button type="button">💋</button><button type="button">🔥</button><button type="button">✨</button><button type="button">🌹</button>
+          <button type="button">👍</button><button type="button">👎</button><button type="button">👏</button><button type="button">🙏</button><button type="button">👋</button><button type="button">🤝</button>
+          <button type="button">☕</button><button type="button">🎉</button><button type="button">🎵</button><button type="button">🌞</button><button type="button">🌙</button><button type="button">🍀</button>
+        </div>
+      </div>
+      <form class="modern-composer" id="modernComposer"><input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden><button type="button" class="icon-button" id="imageButton" title="Bild auswählen" aria-label="Bild auswählen">＋</button><button type="button" class="icon-button emoji-toggle" id="emojiToggle" title="Emojis auswählen" aria-expanded="false" aria-controls="emojiPicker">😊</button><input id="messageInput" autocomplete="off" placeholder="Nachricht schreiben …"><button class="send-button" title="Senden">➤</button></form>
     </section>
   </main>
   <script src="modern-chat.js"></script>

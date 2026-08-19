@@ -1,0 +1,15 @@
+.active-chat{grid-template-rows:auto auto 1fr auto auto auto}
+.emoji-picker{margin:0 14px 8px;padding:10px;border:1px solid #285052;border-radius:16px;background:#0d191b;color:#efffff;box-shadow:0 14px 35px #0005}
+.emoji-picker[hidden]{display:none}
+.emoji-picker-head{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 8px}
+.emoji-picker-head button{width:30px;height:30px;border:0;border-radius:50%;background:#183033;color:#8ff8ef;font-size:18px;cursor:pointer}
+.emoji-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.emoji-grid button{min-width:34px;height:34px;border:0;border-radius:8px;background:transparent;font-size:21px;cursor:pointer}
+.emoji-grid button:hover,.emoji-grid button:focus-visible{background:#143234;outline:2px solid #20d6c5}
+.image-message{padding:5px 5px 20px!important;overflow:hidden}
+.image-message img{display:block;width:min(320px,65vw);max-height:360px;object-fit:cover;border-radius:9px}
+@media(max-width:760px){
+  .emoji-picker{margin:0 8px 6px;max-height:225px;overflow:auto}
+  .emoji-grid{grid-template-columns:repeat(6,1fr)}
+  .emoji-grid button{height:39px;font-size:23px}
+}

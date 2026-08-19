@@ -75,6 +75,7 @@ input::placeholder,textarea::placeholder{color:#789493}
 .message-area .bubble.them{background:#16282a;color:#efffff}
 .message-area .bubble.me{background:linear-gradient(135deg,#0e9f96,#08756f);color:#fff}
 .modern-composer input{background:#071214;border-color:#285052;color:#efffff}.send-button{background:#20d6c5;color:#031112}
+.emoji-picker{background:#0d191b;border-color:#285052;color:#efffff}.emoji-picker-head button{background:#183033;color:#8ff8ef}.emoji-grid button:hover,.emoji-grid button:focus-visible{background:#143234}
 
 /* Mobile Navigation */
 @media(max-width:800px){
