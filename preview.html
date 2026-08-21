@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Feurige Romanze – persönliche Begegnungen und gute Gespräche.">
+  <meta name="theme-color" content="#071012">
+  <title>Feurige Romanze – Begegnungen, die Bedeutung haben</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="template.css">
+  
+</head>
+<body style="--hero-image:url('assets/hero-romance.png')">
+  
+  <header class="site-header">
+    <a class="brand" href="preview.html" aria-label="Feurige Romanze Startseite"><span aria-hidden="true">♥</span> Feurige Romanze</a>
+    <nav aria-label="Hauptnavigation"><a href="#online">Online</a><a href="#sicherheit">Sicherheit</a><a class="header-login" href="#anmelden">Anmelden</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PERSÖNLICH. RESPEKTVOLL. ECHT.</p>
+        <h1>Begegnungen,<br>die <em>Bedeutung</em> haben.</h1>
+        <p class="intro">Lerne Menschen kennen, die deine Interessen teilen – in einer ruhigen und respektvollen Umgebung.</p>
+        <div class="trust-row"><span>✓ Ausschließlich ab 18 Jahren</span><span>✓ Datenschutz im Fokus</span></div>
+      </div>
+
+      <section class="login-card" id="anmelden" aria-labelledby="login-title">
+        <p class="card-kicker">WILLKOMMEN BEI Feurige Romanze</p>
+        <h2 id="login-title">Schön, dass du da bist.</h2>
+        <p class="card-intro">Melde dich an oder erstelle kostenlos ein neues Profil.</p>
+        <form action="preview.html" method="post" accept-charset="utf-8">
+          
+          <label for="nickname">Nickname</label>
+          <input id="nickname" name="nickname" type="text" autocomplete="username" placeholder="Dein Nickname" required>
+          <label for="password">Passwort</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Dein Passwort" required>
+          <button class="primary" type="submit" name="login" value="Login">Anmelden</button>
+        </form>
+        <div class="account-links"><a href="chat/register/forgot.php">Passwort vergessen?</a><a class="register-link" href="chat/register/register.php">Kostenlos registrieren <span>→</span></a></div>
+        <p class="age-note">Diese Plattform ist ausschließlich für Personen ab 18 Jahren.</p>
+      </section>
+    </section>
+
+    <section class="online-section" id="online">
+      <div><p class="section-kicker">JETZT ONLINE</p><h2>Gerade ist etwas los.</h2><p><strong>47</strong> Mitglieder sind aktuell online.</p></div>
+      <div class="online-profiles" aria-label="Auswahl aktuell online befindlicher Profile"><div style="display:flex;gap:14px;justify-content:center"><figure style="margin:0;text-align:center"><img src="assets/hero-romance.png" alt="Beispielprofil"><figcaption>Lena</figcaption></figure><figure style="margin:0;text-align:center"><div style="width:100px;height:100px;border-radius:14px;background:linear-gradient(145deg,#20d6c5,#173033)"></div><figcaption>Sophie</figcaption></figure></div></div>
+    </section>
+
+    <section class="steps" aria-labelledby="steps-title">
+      <p class="section-kicker">SO EINFACH GEHT ES</p><h2 id="steps-title">In drei Schritten ins Gespräch</h2>
+      <div class="step-grid">
+        <article><span>01</span><h3>Profil erstellen</h3><p>Stelle dich ehrlich und sympathisch vor.</p></article>
+        <article><span>02</span><h3>Menschen entdecken</h3><p>Finde interessante Kontakte, die zu dir passen.</p></article>
+        <article><span>03</span><h3>Ins Gespräch kommen</h3><p>Schreibe eine persönliche Nachricht und lernt euch kennen.</p></article>
+      </div>
+    </section>
+
+    <section class="safety" id="sicherheit"><div><p class="section-kicker">SICHER KENNENLERNEN</p><h2>Ein gutes Gefühl von Anfang an.</h2></div><p>Teile keine sensiblen Daten, melde verdächtige Inhalte und triff neue Kontakte zunächst an öffentlichen Orten.</p></section>
+  </main>
+
+  <footer><span>© 2026 Feurige Romanze</span><nav aria-label="Rechtliche Informationen"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a></nav></footer>
+</body>
+</html>
