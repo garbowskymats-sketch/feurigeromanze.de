@@ -30,6 +30,7 @@ const enhanceBubble=(bubble)=>{
 area?.querySelectorAll('.bubble').forEach(enhanceBubble);
 composer?.addEventListener('submit',(event)=>{
   event.preventDefault();const value=input.value.trim();if(!value)return;
+  if(!window.FRCoins?.spend())return;
   const bubble=document.createElement('div');bubble.className='bubble me';addQuotedMessage(bubble,selectedReply);
   const message=document.createElement('span');message.className='message-text';message.textContent=value;
   const time=document.createElement('small');time.textContent='jetzt ✓';bubble.append(message,time);enhanceBubble(bubble);area.appendChild(bubble);
@@ -49,6 +50,7 @@ imageInput?.addEventListener('change',()=>{
   if(!file)return;
   if(!file.type.startsWith('image/')){alert('Bitte wähle eine Bilddatei aus.');imageInput.value='';return}
   if(file.size>8*1024*1024){alert('Das Bild darf höchstens 8 MB groß sein.');imageInput.value='';return}
+  if(!window.FRCoins?.spend()){imageInput.value='';return;}
   const bubble=document.createElement('div');bubble.className='bubble me image-message';addQuotedMessage(bubble,selectedReply);
   const image=document.createElement('img');image.src=URL.createObjectURL(file);image.alt='Ausgewähltes Bild';
   image.addEventListener('load',()=>URL.revokeObjectURL(image.src),{once:true});

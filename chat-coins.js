@@ -1,3 +1,53 @@
-(function(){const K='fr_coins',P='fr_popup';let c=Number(localStorage.getItem(K));if(!Number.isFinite(c))c=5;const h=document.querySelector('.app-header');if(h&&!document.getElementById('coinBalance')){const b=document.createElement('a');b.id='coinBalance';b.href='coins.html';b.textContent='🪙 '+c+' Coins';b.style.cssText='margin-left:auto;margin-right:16px;color:#74eee8;text-decoration:none;font-weight:700';h.appendChild(b)}const f=document.getElementById('modernComposer'),i=document.getElementById('messageInput');if(f&&i)f.addEventListener('submit',function(e){if(!i.value.trim())return;if(c<1){e.preventDefault();let x=document.getElementById(P);if(!x){x=document.createElement('div');x.id=P;x.style.cssText='position:fixed;inset:0;background:#000b;display:grid;place-items:center;z-index:99;padding:20px';x.innerHTML='<div style="background:#102021;color:#efffff;border:1px solid #285759;border-radius:18px;padding:26px;max-width:420px;width:100%;text-align:center"><h2>Deine Gratis-Nachrichten sind aufgebraucht</h2><p>Wähle ein Coin-Paket, um weiterzuschreiben.</p><a href="coins.html" style="display:block;background:#20c9c4;color:#061111;padding:13px;border-radius:10px;font-weight:bold;text-decoration:none">Coin-Angebote ansehen</a><button style="margin-top:12px;background:none;color:#efffff;border:0" onclick="this.closest('#fr_popup').remove()">Später</button></div>';document.body.appendChild(x)}return}c--;localStorage.setItem(K,c);const b=document.getElementById('coinBalance');if(b)b.textContent='🪙 '+c+' Coins'});})();
-
-(function(){var b=document.getElementById('coinBalance'),n=document.querySelector('.app-nav'),m=n&&n.querySelector('a[href="chat.html"]');if(b&&m){m.parentNode.insertBefore(b,m);b.style.cssText='color:#74eee8;text-decoration:none;font-weight:700;padding:8px 12px;margin:0 8px;border-radius:20px;background:#123536;order:0'}})();
+/* Browser demo only: real accounts and payments require a server ledger. */
+(() => {
+  const key = 'fr_coins';
+  const button = document.getElementById('coinBalance');
+  const dialog = document.getElementById('coinDialog');
+  const status = document.getElementById('coinStatus');
+  let storageOK = true;
+  function balance() {
+    try {
+      const raw = localStorage.getItem(key);
+      if (raw === null) { localStorage.setItem(key, '5'); return 5; }
+      const n = Number(raw);
+      return Number.isSafeInteger(n) && n >= 0 ? n : 0;
+    } catch { storageOK = false; return 0; }
+  }
+  function render() {
+    const n = balance();
+    if (button) {
+      button.textContent = '🪙 ' + n + ' Coins';
+      button.setAttribute('aria-label', n + ' Coins verfügbar. Angebote öffnen');
+    }
+    return n;
+  }
+  function open() {
+    render();
+    if (!dialog) return;
+    status.textContent = storageOK ? 'Demo: Zahlungen sind noch nicht angeschlossen.' : 'Das Guthaben kann nicht gespeichert werden. Bitte erlaube die Speicherung im Browser.';
+    document.getElementById('coinTitle').textContent = balance() === 0 ? 'Leider ist Ihr Guthaben aufgebraucht.' : 'Coin-Pakete';
+    if (!dialog.open) dialog.showModal();
+  }
+  window.FRCoins = {
+    balance: render,
+    spend() {
+      const n = render();
+      if (!storageOK || n < 1) { open(); return false; }
+      try { localStorage.setItem(key, String(n - 1)); }
+      catch { storageOK = false; open(); return false; }
+      render();
+      return true;
+    },
+    open
+  };
+  button?.addEventListener('click', open);
+  document.getElementById('closeCoinDialog')?.addEventListener('click', () => dialog.close());
+  dialog?.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog?.querySelectorAll('[data-package]').forEach(option => option.addEventListener('click', () => {
+    dialog.querySelectorAll('[data-package]').forEach(item => item.setAttribute('aria-pressed', String(item === option)));
+    status.textContent = option.dataset.package + ' ausgewählt. Noch keine Zahlung möglich; es werden keine Coins gutgeschrieben.';
+  }));
+  window.addEventListener('storage', event => { if (event.key === key || event.key === null) render(); });
+  window.addEventListener('focus', render);
+  render();
+})();

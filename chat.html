@@ -1,4 +1,3 @@
-<style>.header-coins{position:fixed;top:16px;left:170px;z-index:10000;background:#123536;color:#74eee8;padding:8px 12px;border-radius:20px;text-decoration:none;font-weight:700;font-size:14px}</style><a class="header-coins" href="coins.html">🪙 5 Coins</a>
 <!doctype html>
 <html lang="de">
 <head>
@@ -7,9 +6,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css"><link rel="stylesheet" href="app-serious.css"><link rel="stylesheet" href="complete.css"><link rel="stylesheet" href="modern-chat.css">
-<link rel="stylesheet" href="mobile-nav.css"><link rel="stylesheet" href="turquoise-theme.css"><link rel="stylesheet" href="chat-extras.css"></head>
+<link rel="stylesheet" href="mobile-nav.css"><link rel="stylesheet" href="turquoise-theme.css"><link rel="stylesheet" href="chat-extras.css"><style>
+.app-header{gap:12px}.app-nav{display:flex;align-items:center;gap:8px;min-width:0}
+#coinBalance{position:static;flex-shrink:0;border:1px solid #285759;border-radius:22px;background:#123536;color:#74eee8;padding:9px 12px;font:700 14px inherit;white-space:nowrap;cursor:pointer}
+#coinDialog{box-sizing:border-box;width:min(620px,calc(100% - 24px));max-height:85dvh;overflow:auto;padding:24px;border:1px solid #285759;border-radius:18px;background:#102021;color:#efffff}
+#coinDialog::backdrop{background:#000b}#coinDialog h2{margin-top:0}
+.coin-packages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.coin-packages button{padding:18px 12px;border:1px solid #285759;border-radius:12px;background:#092022;color:#efffff;cursor:pointer}
+.coin-packages button[aria-pressed=true]{outline:2px solid #20d6c5}
+.coin-packages strong,.coin-packages span{display:block;margin-bottom:6px}
+#closeCoinDialog{margin-top:12px;padding:10px 18px;background:#20d6c5;border:0;border-radius:10px;cursor:pointer}
+#coinStatus{color:#a4bcbc}
+@media(max-width:1050px){.app-nav a[href="members.html"],.app-nav a[href="edit-profile.html"]{display:none}}
+@media(max-width:480px){.app-header{padding:8px;gap:6px}.app-brand{font-size:16px}.app-nav{gap:4px}.app-nav a.active{font-size:11px;padding:6px}#coinBalance{padding:7px;font-size:12px}.app-nav .avatar-mini{width:28px;height:28px}.app-nav .nav-badge{display:none}}
+</style></head>
 <body class="messenger-body">
-  <header class="app-header"><a class="app-brand" href="index.html">Feurige <b>Romanze</b></a><nav class="app-nav"><a href="members.html">Entdecken</a><a class="active" href="chat.html">Nachrichten <span class="nav-badge">2</span></a><a href="edit-profile.html">Mein Bereich</a><span class="avatar-mini">M</span></nav></header>
+  <header class="app-header"><a class="app-brand" href="index.html">Feurige <b>Romanze</b></a><nav class="app-nav"><a href="members.html">Entdecken</a><button type="button" id="coinBalance" aria-live="polite" aria-haspopup="dialog">Coins …</button><a class="active" href="chat.html">Nachrichten <span class="nav-badge">2</span></a><a href="edit-profile.html">Mein Bereich</a><span class="avatar-mini">M</span></nav></header>
   <main class="messenger-shell">
     <aside class="chat-sidebar" id="chatSidebar">
       <div class="sidebar-head"><div><p class="eyebrow">NACHRICHTEN</p><h1>Chats</h1></div><button class="icon-button" title="Neue Nachricht">＋</button></div>
@@ -45,12 +57,8 @@
       <form class="modern-composer" id="modernComposer"><input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden><button type="button" class="icon-button" id="imageButton" title="Bild auswählen" aria-label="Bild auswählen">＋</button><button type="button" class="icon-button emoji-toggle" id="emojiToggle" title="Emojis auswählen" aria-expanded="false" aria-controls="emojiPicker">😊</button><input id="messageInput" autocomplete="off" placeholder="Nachricht schreiben …"><button class="send-button" title="Senden">➤</button></form>
     </section>
   </main>
-  <script src="modern-chat.js"></script>
+  <dialog id="coinDialog" aria-labelledby="coinTitle"><h2 id="coinTitle">Coin-Pakete</h2><p>1 Nachricht kostet 1 Coin. Wähle dein Paket:</p><div class="coin-packages"><button type="button" data-package="25 Coins für 32,50 €" aria-pressed="false"><strong>25 Coins</strong><span>32,50 €</span><small>1,30 € pro Nachricht</small></button><button type="button" data-package="100 Coins für 120,00 €" aria-pressed="false"><strong>100 Coins</strong><span>120,00 €</span><small>1,20 € pro Nachricht</small></button><button type="button" data-package="500 Coins für 500,00 €" aria-pressed="false"><strong>500 Coins</strong><span>500,00 €</span><small>1,00 € pro Nachricht</small></button><button type="button" data-package="2.000 Coins für 900,00 €" aria-pressed="false"><strong>2.000 Coins</strong><span>900,00 €</span><small>0,45 € pro Nachricht</small></button></div><p id="coinStatus" role="status">Demo: Zahlungen sind noch nicht angeschlossen.</p><p><small>Die 5 gratis Nachrichten gelten in dieser Demo einmal pro Browser. Echte Konten sind noch nicht angebunden.</small></p><button type="button" id="closeCoinDialog" autofocus>Zurück zum Chat</button></dialog>
+<script src="chat-coins.js?v=20260912"></script>
+<script src="modern-chat.js?v=20260912"></script>
 <script src="mobile-nav.js"></script></body>
 </html>
-
-<script src="chat-coins.js"></script>
-
-<script>(function(){var b=document.getElementById('coinBalance');var n=document.querySelector('.app-nav');if(b&&n){b.style.cssText='color:#74eee8;text-decoration:none;font-weight:700;padding:8px 12px;order:0';n.insertBefore(b,n.firstChild)}})();</script>
-
-<style>.header-coins{left:52%!important;right:auto!important;transform:translateX(-50%);top:16px!important}</style>
