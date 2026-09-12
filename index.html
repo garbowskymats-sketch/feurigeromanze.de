@@ -3,57 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feurige Romanze</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;background:#070b0c;color:#f4ffff;font-family:Arial,sans-serif}
-    header{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;border-bottom:1px solid #183536}
-    .logo{font-size:25px;font-weight:bold}.logo span{color:#20c9c4}
-    .coins{background:#123536;padding:12px 18px;border-radius:30px;color:#62e6df}
-    main{max-width:900px;margin:90px auto;padding:20px;text-align:center}
-    h1{font-size:clamp(42px,7vw,78px);margin:10px 0}
-    h1 span{color:#20c9c4}
-    p{color:#a4bcbc;font-size:19px;line-height:1.6}
-    .buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:35px}
-    a{display:inline-block;text-decoration:none;padding:15px 24px;border-radius:12px;font-weight:bold}
-    .primary{background:#20c9c4;color:#061111}
-    .secondary{border:1px solid #286567;color:#d9ffff}
-    .info{margin:60px auto 0;max-width:600px;padding:25px;background:#102021;border:1px solid #1d5557;border-radius:18px}
-    footer{text-align:center;padding:30px;color:#6e8b8b}
-  </style>
-</head>
+  <meta name="description" content="Feurige Romanze – echte Begegnungen, die Funken schlagen.">
+  <title>Feurige Romanze – Finde dein Knistern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="turquoise-theme.css"></head>
 <body>
-  <header>
-    <div class="logo">Feurige <span>Romanze</span></div>
-    <div class="coins">🪙 5 Coins</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Feurige Romanze Startseite">
+      <span class="brand-flame" aria-hidden="true">♥</span>
+      <span>Feurige <strong>Romanze</strong></span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#so-gehts">So funktioniert’s</a>
+      <a href="#sicherheit">Sicherheit</a>
+      <a class="login-link" href="login.html">Anmelden</a>
+    </nav>
   </header>
 
   <main>
-    <p>PRIVATE BEGEGNUNGEN · RESPEKTVOLL · AB 18</p>
-    <h1>Finde dein<br><span>Knistern.</span></h1>
-    <p>
-      Erstelle dein Profil, lerne interessante Menschen kennen
-      und starte dein persönliches Gespräch.
-    </p>
+    <section class="hero">
+      <div class="hero-photo" role="img" aria-label="Frau mit Gitarre im warmen Abendlicht"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">PERSÖNLICH. RESPEKTVOLL. ECHT.</p>
+        <h1>Begegnungen,<br>die <em>Bedeutung</em> haben.</h1>
+        <p class="intro">Lerne Menschen kennen, die deine Werte und Interessen teilen – in einer ruhigen, respektvollen Umgebung.</p>
+        <div class="trust-row">
+          <span>✓ Datenschutz im Fokus</span><span>✓ Respektvolle Community</span>
+        </div>
+      </div>
 
-    <div class="buttons">
-      <a class="primary" href="register.html">Kostenlos registrieren</a>
-      <a class="secondary" href="login.html">Anmelden</a>
-      <a class="secondary" href="chat.html">Zum Chat</a>
-    </div>
+      <section class="signup-card entry-card" aria-labelledby="entry-title">
+        <p class="card-kicker">WILLKOMMEN BEI FEURIGE ROMANZE</p>
+        <h2 id="entry-title">Wie möchtest du starten?</h2>
+        <p class="entry-intro">Wähle aus, ob du bereits Mitglied bist oder ein neues Profil erstellen möchtest.</p>
+        <a class="entry-action entry-login" href="login.html"><span><strong>Anmelden</strong><small>Ich habe bereits ein Konto</small></span><b>→</b></a>
+        <a class="entry-action entry-register" href="register.html"><span><strong>Registrieren</strong><small>Neues Profil kostenlos erstellen</small></span><b>→</b></a>
+        <p class="legal">Die Plattform ist ausschließlich für Personen ab 18 Jahren.</p>
+        <p class="member-note"><span class="pulse"></span> Deine Angaben werden vertraulich behandelt</p>
+      </section>
+    </section>
 
-    <div class="info">
-      <h2>5 Coins zum Start</h2>
-      <p>
-        Jeder neue Account erhält 5 kostenlose Coins.
-        Eine Nachricht kostet 1 Coin.
-      </p>
-      <a class="primary" href="coins.html">Coins kaufen</a>
-    </div>
+    <section class="steps" id="so-gehts">
+      <p class="section-kicker">SO EINFACH GEHT’S</p>
+      <h2>In drei Schritten ins Gespräch</h2>
+      <div class="step-grid">
+        <article><span>01</span><h3>Profil erstellen</h3><p>Zeig dich so, wie du bist – ehrlich, sympathisch und in wenigen Minuten.</p></article>
+        <article><span>02</span><h3>Menschen entdecken</h3><p>Finde interessante Singles in deiner Nähe und schau, wer zu dir passt.</p></article>
+        <article><span>03</span><h3>Ins Gespräch kommen</h3><p>Schreibe eine persönliche Nachricht und lernt euch in Ruhe kennen.</p></article>
+      </div>
+    </section>
+
+    <section class="safety" id="sicherheit">
+      <div><p class="section-kicker">VERTRAUEN VON ANFANG AN</p><h2>Kennenlernen mit einem guten Gefühl.</h2></div>
+      <p>Klare Privatsphäre-Einstellungen, geprüfte Profile und ein erreichbarer Support sorgen dafür, dass du dich auf das Wesentliche konzentrieren kannst.</p>
+    </section>
   </main>
 
   <footer>
-    © 2026 Feurige Romanze · Impressum · Datenschutz
+    <span>© 2026 Feurige Romanze</span>
+    <div><a href="legal.html">Impressum & Datenschutz</a><a href="help.html">Hilfe</a><a href="contact.html">Kontakt</a></div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
